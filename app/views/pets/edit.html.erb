@@ -1,0 +1,12 @@
+<h1>Edit a pet you found</h1>
+<%= form_with model: @pet do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+  <%= f.label :species %>
+  <%= f.text_field :species %>
+  <%= f.label :date %>
+  <%= f.date_field :date %>
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,6 @@
+<h1>Pets</h1>
+<% @pets.each do |pet| %>
+  <p><%= pet.name %> found <%= pet.found_days_ago %> days ago: <%= link_to "more details", pet_path(pet) %></p>
+  <%= link_to "remove this one", pet_path(pet),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+<% end %>
